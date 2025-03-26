@@ -38,13 +38,16 @@ jobs:
           name: spigot-${{ env.MINECRAFT_VERSION }}
           path: ./spigot-${{ env.MINECRAFT_VERSION }}.jar
 
+    outputs:
+      minecraft_version: ${{ env.MINECRAFT_VERSION }}
+
   release:
     needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
     env:
-      MINECRAFT_VERSION: ${{ jobs.build.outputs.minecraft_version }} # get version from build job
+      MINECRAFT_VERSION: ${{ needs.build.outputs.minecraft_version }}
 
     steps:
       - name: Download Artifact
@@ -75,12 +78,3 @@ jobs:
           asset_path: spigot-${{ env.MINECRAFT_VERSION }}/spigot-${{ env.MINECRAFT_VERSION }}.jar
           asset_name: spigot-${{ env.MINECRAFT_VERSION }}.jar
           asset_content_type: application/java-archive
-
-  build_output:
-    needs: build
-    runs-on: ubuntu-latest
-    outputs:
-      minecraft_version: ${{ env.MINECRAFT_VERSION }}
-    steps:
-      - name: set output
-        run: echo "minecraft_version=${{ needs.build.env.MINECRAFT_VERSION }}" >> $GITHUB_OUTPUT
