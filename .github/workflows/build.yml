@@ -63,8 +63,7 @@ jobs:
 
           body: |
             Automated build of Spigot for Minecraft version ${{ env.SPIGOT_VERSION }}.
-            Built JAR: ${{ steps.get_jar.outputs.filename }}
-            Triggered by: ${{ github.event_name }}
+
 
           token: ${{ secrets.GITHUB_TOKEN }}
 
