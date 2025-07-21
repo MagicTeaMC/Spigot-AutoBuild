@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      SPIGOT_VERSION: 1.21.7
+      SPIGOT_VERSION: 1.21.8
 
     steps:
       - name: Checkout Repository
