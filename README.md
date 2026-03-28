@@ -1,6 +1,7 @@
 # Spigot AutoBuild
 ## Version
-- [1.21.11](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases)
+- [26.1](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases)
+- [1.21.11](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases/tag/spigot-1.21.11-68)
 - [1.21.9/10](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases/tag/spigot-1.21.9-53)
 - [1.21.8](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases/tag/spigot-1.21.8-41)
 - [1.21.7](https://github.com/MagicTeaMC/Spigot-AutoBuild/releases/tag/spigot-1.21.7-29)
